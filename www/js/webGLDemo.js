@@ -24,7 +24,7 @@ function init() {
   var geometry = new THREE.CylinderGeometry( 0, 10, 30, 4, 1 );
   var material = new THREE.MeshLambertMaterial( { color:0xffffff, shading: THREE.FlatShading } );
 
-  for ( var i = 0; i < 4000; i ++ ) {
+  for ( var i = 0; i < 1000; i ++ ) {
 
     var mesh = new THREE.Mesh( geometry, material );
     mesh.position.x = ( Math.random() - 0.5 ) * 1000;
@@ -82,7 +82,6 @@ function onWindowResize() {
 }
 
 function animate() {
-  drawFPS();
   requestAnimationFrame( animate );
   controls.update();
 

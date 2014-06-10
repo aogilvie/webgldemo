@@ -37,7 +37,6 @@ Supports Desktop, Chrome, Safari, FireFox
         <title>Hello World</title>
     </head>
     <body>
-        <canvas id="fpsCounter"></canvas> 
         <div id="container"></div> 
         <script src="js/three.min.js"></script>
         <script src="js/OrbitControls.js"></script>
@@ -54,7 +53,6 @@ Supports Desktop, Chrome, Safari, FireFox
                         var animate = { type: "fadeIn", timeout: 500 };
                         wizCanvas.show("newCanvas", { animation: animate });
                         
-                        wizCanvas.load("newCanvas", "js/fpsCounter.js");
                         wizCanvas.load("newCanvas", "js/three.min.js");
                         wizCanvas.load("newCanvas", "js/OrbitControls.js");
                         wizCanvas.load("newCanvas", "js/webGLDemo.js");

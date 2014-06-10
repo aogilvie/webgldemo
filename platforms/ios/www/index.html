@@ -17,6 +17,16 @@
     specific language governing permissions and limitations
     under the License.
 -->
+
+<!-- 
+
+You can try this in your browser at http://allyogilvie.parseapp.com/webgldemo/
+
+Supports Native iOS 6, 7, 8.
+Supports Browser iOS 8.
+Supports Desktop, Chrome, Safari, FireFox
+
+-->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -42,6 +52,7 @@
                         // Show and load into the canvas
                         var animate = { type: "fadeIn", timeout: 500 };
                         wizCanvas.show("newCanvas", { animation: animate });
+                        
                         wizCanvas.load("newCanvas", "js/three.min.js");
                         wizCanvas.load("newCanvas", "js/OrbitControls.js");
                         wizCanvas.load("newCanvas", "js/webGLDemo.js");
@@ -51,9 +62,22 @@
                     
                 }, false);
             } else {
-                // Execute WebGLDemo
-                init();
-                animate();
+            
+                var scripts = [
+                    "js/fpsCounter.js",
+                    "js/three.min.js",
+                    "js/OrbitControls.js",
+                    "js/webGLDemo.js",
+                    "js/webGLDemo_boot.js"
+                ];
+                
+                for (var i = 0; i < scripts.length; i++) {
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = scripts[i];
+                    document.body.appendChild(script);
+                }
+                
             }
             
             app.initialize();
