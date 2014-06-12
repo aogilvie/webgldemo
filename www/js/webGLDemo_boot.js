@@ -3,8 +3,7 @@
  *
  */
 // Execute WebGLDemo
-init();
+if (typeof init === 'function') {
+	init();
+}
 animate();
-
-
-console.log("THE DATE: " + Date.now());

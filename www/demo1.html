@@ -37,10 +37,7 @@ Supports Desktop, Chrome, Safari, FireFox
         <title>Hello World</title>
     </head>
     <body>
-        <div id="container"></div> 
-        <script src="js/three.min.js"></script>
-        <script src="js/OrbitControls.js"></script>
-        <script type="text/javascript" src="js/webGLDemo.js"></script>
+        <div id="container"></div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
@@ -64,7 +61,6 @@ Supports Desktop, Chrome, Safari, FireFox
             } else {
             
                 var scripts = [
-                    "js/fpsCounter.js",
                     "js/three.min.js",
                     "js/OrbitControls.js",
                     "js/webGLDemo.js",
@@ -75,12 +71,11 @@ Supports Desktop, Chrome, Safari, FireFox
                     var script = document.createElement('script');
                     script.type = 'text/javascript';
                     script.src = scripts[i];
+                    script.async = false;
                     document.body.appendChild(script);
                 }
-                
             }
-            
-            app.initialize();
+           	app.initialize();
 
         </script>
     </body>

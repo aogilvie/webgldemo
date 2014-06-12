@@ -19,3 +19,6 @@ gen/
 out/
 local.properties
 log/
+
+# Cordova
+platforms/ios/www
